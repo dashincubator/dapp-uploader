@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimal-ui'>
+
+        <link href='./favicon.ico' rel='icon'>
+        <link href='./css/themes/default.css' rel='stylesheet' type='text/css'>
+        <link href='./css/app.css' rel='stylesheet' type='text/css'>
+
+        <noscript>
+            Javascript Is Required To View This Website! <br />
+
+            <a href='https://www.enable-javascript.com/' target='_blank'>
+                Follow These Instructions To Enable Javascript In Your Web Browser.
+            </a>
+        </noscript>
+    </head>
+    <body>
+        <section
+            class='site'
+            data-bind='{"ref": "scrollbar.mount[],scrollbar.width.mount,scrollto.mount,site.container", "refs": {"controls": "site.controls", "scrollbar": "scrollbar.site"}}'
+            data-scroll='controls,scrollbar'
+            data-scrollbar
+            style='background: url(./images/tile.png) repeat;'
+        >
+            <section class='page --flex-center' data-bind='{"ref": "site.scrolltop"}' style='display: flex;'>
+                <div class="--flex-column --flex-horizontal --max-width --max-width-800px --spacer-vertical --spacer-600">
+                    <div class="--text-center">
+                        <h1 class="page-title --text-1.25x">
+                            Deploy Decentralized Applications In <span class='--color --color-secondary-400 --text-underline'>Seconds</span>
+                        </h1>
+
+                        <span class="page-subtitle --margin-top --margin-500">
+                            Dash Deploy provides decentralized hosting of browser based applications. Join the decentralized internet revolution, start launching your DApps today!
+                        </span>
+                    </div>
+
+                    <label class='card --background-grey-400 --border --border-border-300 --border-dashed --border-radius-700 --border-secondary --border-state --flex-horizontal --spacer-top --spacer-500'>
+                        <div class="text-list --padding --padding-800">
+                            <div class="--flex-horizontal">
+                                <div class="icon --color-secondary-500 --size-800">
+                                    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M14.5 3h-2.893C9.397 3 8.565 1.832 8 1.401S6.5 1 6.5 1h-5A1.5 1.5 0 000 2.5v3A1.5 1.5 0 011.5 4h13A1.5 1.5 0 0116 5.5v-1A1.5 1.5 0 0014.5 3z"/><path opacity=".85" d="M16 13.5a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 010 13.5v-8A1.5 1.5 0 011.5 4h13A1.5 1.5 0 0116 5.5v8z"/></svg>
+                                </div>
+                            </div>
+
+                            <div class="text --flex-center --margin-top --margin-500">
+                                <span class='--text-crop-top'>
+                                    Drag & drop any folder with an <b>index.html</b> file to deploy
+                                </span>
+                            </div>
+
+                            <div class="text --flex-center">
+                                <div class="--text-crop-bottom">
+                                    or <b class='--text-underline'>click</b> to browse files on your computer
+                                </div>
+                            </div>
+                        </div>
+
+                        <input class='--hidden' type='file'
+                            data-bind='{"refs": {
+                                "ipfs": "upload.ipfs",
+                                "success": "upload.successful"
+                            }}'
+                            data-change='upload.ipfs.onchange'
+                            data-click='upload.ipfs.reset'
+                            directory
+                            multiple
+                            webkitdirectory
+                        >
+                    </label>
+
+                    <div class='card --background-grey-400 --border --border-border-300 --border-dashed --border-radius-700 --flex-horizontal --hidden --spacer-top --spacer-500' data-bind='{"ref": "upload.successful"}'>
+                        <div class="text-list --padding --padding-800">
+                            <div class="--flex-center">
+                                <div class="button button--circle --background-green-400 --margin-right --margin-300 --padding-300">
+                                    <div class="icon --color-white-400">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M5.818 8.728l-2.909-2.91L0 8.728l2.909 2.909 2.909 2.909 2.91-2.909L16 4.364l-2.91-2.909z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text --flex-center --margin-top --margin-500 --text-bold">
+                                Application uploaded successfuly, check console for Dash Platform output
+                            </div>
+
+                            <div class="text --flex-center" data-bind='{"ref": "upload.ipfs"}'></div>
+                        </div>
+                    </div>
+
+                    <label class='card --background-grey-400 --border --border-border-300 --border-dashed --border-radius-700 --border-secondary --border-state --flex-horizontal --hidden --spacer-top --spacer-100' data-bind='{"ref": "upload.package"}'>
+                        <div class="text-list --padding --padding-800">
+                            <div class="--flex-horizontal">
+                                <div class="button button--circle --background-primary-400 --margin-right --margin-300 --padding-300">
+                                    <div class="icon --color-white-400">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3.527 14.948a.176.176 0 01-.248 0L1.051 12.72a.176.176 0 010-.248l11.42-11.419a.176.176 0 01.248 0l2.229 2.228a.174.174 0 010 .248L3.527 14.948z"/><path d="M12.472 14.948c.068.068.18.068.248 0l2.229-2.229a.176.176 0 000-.248L3.528 1.052a.176.176 0 00-.248 0L1.052 3.28a.176.176 0 000 .248l11.42 11.42z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text --flex-center --margin-top --margin-500">
+                                <span class='--color --color-primary-400 --text-crop-top'>
+                                    <b class='--color-primary-400'>package.json</b> was missing
+                                </span>
+                            </div>
+
+                            <div class="text --flex-center">
+                                <div class="--text-crop-bottom">
+                                    Drag & drop the file or click to browse files on your computer
+                                </div>
+                            </div>
+                        </div>
+
+                        <input class='--hidden' type='file' data-change='upload.ipfs.package' data-click='upload.ipfs.reset' >
+                    </label>
+
+                    <div class="list --spacer-top --spacer-300">
+                        <div class="list-item list-item--bulletpoint --background-black-400">
+                            Application is uploaded to IPFS
+                        </div>
+                        <div class="list-item list-item--bulletpoint --background-black-400">
+                            <span>
+                                <b>package.json</b> is used to share DApp information ( name, description, etc. ) with the Dash DApp Store. It is only required if you wish to share the DApp through the Dash DApp Store.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner" style='background-image: url(./images/background.png); opacity: 0.06;'></div>
+            </section>
+
+            <div class='anchors'>
+                <div class="--absolute-full --active --background --background-gradient --background-grey --flex-center --hidden-not-active --pointer-events-auto" data-bind='{"ref": "anchor.loading"}'>
+                    <div class="button button--processing --color-secondary-400 --pointer-event-none --size-700"></div>
+
+                    <h2 class="page-title --margin-top --margin-600 --text-center">
+                        Connecting to Dash Platform Wallet
+                    </h2>
+
+                    <span class="page-subtitle --margin-top --margin-200 --max-width --max-width-480px --text-center">
+                        Connecting to platform on testnet can take a few seconds to a minute
+                    </span>
+                </div>
+
+                <div class='alert anchor anchor--ne --flex-row' data-bind='{"ref": "alert.error.alert"}'>
+                    <div class='button --background-state --background-red --border-radius-0px --color-state --color-white --flex-center --width-40px' data-bind='{"refs": {"deactivate": "alert.error.alert"}}' data-click='deactivate'>
+                        <div class="icon --size-300">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3.527 14.948a.176.176 0 01-.248 0L1.051 12.72a.176.176 0 010-.248l11.42-11.419a.176.176 0 01.248 0l2.229 2.228a.174.174 0 010 .248L3.527 14.948z"/><path d="M12.472 14.948c.068.068.18.068.248 0l2.229-2.229a.176.176 0 000-.248L3.528 1.052a.176.176 0 00-.248 0L1.052 3.28a.176.176 0 000 .248l11.42 11.42z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class='--background --background-white-400 --flex-fill --padding' data-bind='{"ref": "alert.error.messages"}'></div>
+                </div>
+
+                <div class='alert anchor anchor--ne --flex-row' data-bind='{"ref": "alert.success.alert"}' >
+                    <div class='button --background-state --background-green --border-radius-0px --color-state --color-white --flex-center --width-40px' data-bind='{"refs": {"deactivate": "alert.success.alert"}}' data-click='deactivate'>
+                        <div class="icon --size-300">
+                            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3.527 14.948a.176.176 0 01-.248 0L1.051 12.72a.176.176 0 010-.248l11.42-11.419a.176.176 0 01.248 0l2.229 2.228a.174.174 0 010 .248L3.527 14.948z"/><path d="M12.472 14.948c.068.068.18.068.248 0l2.229-2.229a.176.176 0 000-.248L3.528 1.052a.176.176 0 00-.248 0L1.052 3.28a.176.176 0 000 .248l11.42 11.42z"/></svg>
+                        </div>
+                    </div>
+
+                    <div class='--background --background-white-400 --flex-fill --padding' data-bind='{"ref": "alert.success.messages"}'></div>
+                </div>
+            </div>
+
+            <div class='scrollbar scrollbar--fixed scrollbar--hidden' data-bind='{"ref": "scrollbar.site"}'></div>
+        </section>
+
+        <script src='./js/app.js'></script>
+    </body>
+</html>
